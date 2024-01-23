@@ -1,0 +1,7 @@
+extends header 
+
+block content
+    each message in messages
+        h1= message.text
+        p= message.user 
+        p= message.added
