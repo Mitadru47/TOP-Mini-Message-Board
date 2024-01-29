@@ -26,4 +26,13 @@ router.get("/", function (req, res){
     res.end();
 });
 
+router.post("/new", function (req, res){
+
+  const author = req.body.authorName;
+  const message = req.body.messageText;
+
+  messages.push({ text: message, user: author, added: new Date()});  
+  res.redirect("/");
+});
+
 module.exports = router;

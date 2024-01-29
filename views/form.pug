@@ -3,13 +3,13 @@ extends header
 block content 
     h1= heading 
 
-    form( action="/new", method="POST" )
+    form(action="/new", method="POST")
 
         p Author's Name:
-        input( type="text" name="authorName" )
+        input(type="text", name="authorName")
 
         p Message:
-        input( type="text" name="messageText" )
+        input(type="text", name="messageText")
 
         p
-        input( type="submit" )
+        button(type="submit") Submit!

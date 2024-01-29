@@ -5,6 +5,10 @@ const app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
+// Parse incoming request bodies in a middleware before your handlers.
+// Available under the req.body property.
+app.use(express.urlencoded({ extended: false }));
+
 const indexRouter = require('./routes/index');
 app.use("/", indexRouter);
 
