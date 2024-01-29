@@ -1,0 +1,15 @@
+extends header
+
+block content 
+    h1= heading 
+
+    form( action="/new", method="POST" )
+
+        p Author's Name:
+        input( type="text" name="authorName" )
+
+        p Message:
+        input( type="text" name="messageText" )
+
+        p
+        input( type="submit" )
